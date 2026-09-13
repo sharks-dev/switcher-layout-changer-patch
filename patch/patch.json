@@ -1,0 +1,13 @@
+{
+        "description": "Change the switcher grid layout for easier reachability",
+        "last_updated": "2026-09-12T20:17:13.168",
+        "name": "switcher_layout_changer",
+        "display_name": "Switcher Layout",
+        "category": "homescreen",
+        "author": "sharks",
+        "discussion": "https://github.com/sharks-dev/switcher-layout-changer-patch/issues/",
+        "donations": "",
+        "sources": "https://github.com/sharks-dev/switcher-layout-changer-patch",
+        "version": "0.0.1",
+        "compatible": ["5.1.0.11"]
+}

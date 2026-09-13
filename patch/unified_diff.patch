@@ -1,0 +1,40 @@
+diff --git a/SwitcherGrid.qml b/SwitcherGrid.qml
+index 9b422cf..556c6be 100644
+--- a/usr/lib64/qt5/qml/Sailfish/Lipstick/SwitcherGrid.qml
++++ b/usr/lib64/qt5/qml/Sailfish/Lipstick/SwitcherGrid.qml
+@@ -1,9 +1,20 @@
+ import QtQuick 2.6
+ import Sailfish.Silica 1.0
++import Nemo.Configuration 1.0
+
+ Grid {
+     id: grid
+
++    ConfigurationValue {
++        id: switcherCorner
++        key: "/apps/patchmanager/switcher_layout/corner"
++        defaultValue: 0
++    }
++
++    layoutDirection: (switcherCorner.value === 1 || switcherCorner.value === 3)
++                     ? Qt.RightToLeft
++                     : Qt.LeftToRight
++
+     property real statusBarHeight: Theme.paddingMedium + Theme.paddingSmall + Theme.iconSizeExtraSmall
+     readonly property real minimumHeight: _pageHeight - statusBarHeight - ((_largeScreen ? 5 : 3) * Theme.paddingLarge)
+     readonly property real maximumWidth: parent.width - 2*Theme.paddingLarge
+@@ -13,9 +24,11 @@ Grid {
+     readonly property int largeColumns: (maximumWidth + spacing) / (Theme.coverSizeLarge.width + spacing)
+     readonly property int largeRows: minimumHeight / Theme.coverSizeLarge.height
+
+-    property int baseY: _largeScreen
+-                        ? (_pageHeight > parent.width ? statusBarHeight + rowSpacing : Theme.paddingLarge * 5)
+-                        : statusBarHeight + Theme.paddingSmall + Theme.paddingLarge
++    property int baseY: (switcherCorner.value === 2 || switcherCorner.value === 3)
++        ? Math.max(statusBarHeight + Theme.paddingLarge, _pageHeight - height - Theme.paddingLarge)
++        : (_largeScreen
++            ? (_pageHeight > parent.width ? statusBarHeight + rowSpacing : Theme.paddingLarge * 5)
++            : statusBarHeight + Theme.paddingSmall + Theme.paddingLarge)
+
+     property Item _page
+     property int _pageHeight: _page ? _page.height : Screen.height
