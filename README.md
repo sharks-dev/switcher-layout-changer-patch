@@ -7,7 +7,7 @@ It may help for reachability, or to ensure important parts of ambiance images ar
 #### Screenshots:
 
 <table>
-  <td><img src="https://raw.githubusercontent.com/sharks-dev/switcher-layout-changer-patch/refs/heads/main/screenshots/1-bottomright.png" alt="Bottom Right" width="200"/></td>
-  <td><img src="https://raw.githubusercontent.com/sharks-dev/switcher-layout-changer-patch/refs/heads/main/screenshots/2-bottomleft.png" alt="Bottom Left" width="200"/></td>
-  <td><img src="https://raw.githubusercontent.com/sharks-dev/switcher-layout-changer-patch/refs/heads/main/screenshots/3-topright.png" alt="Top Right" width="200"/></td>
+  <td><img src="https://raw.githubusercontent.com/sharks-dev/switcher-layout-changer-patch/refs/heads/main/screenshots/1-bottomright.jpeg" alt="Bottom Right" width="200"/></td>
+  <td><img src="https://raw.githubusercontent.com/sharks-dev/switcher-layout-changer-patch/refs/heads/main/screenshots/2-bottomleft.jpeg" alt="Bottom Left" width="200"/></td>
+  <td><img src="https://raw.githubusercontent.com/sharks-dev/switcher-layout-changer-patch/refs/heads/main/screenshots/3-topright.jpeg" alt="Top Right" width="200"/></td>
 </table>
